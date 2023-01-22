@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Stats preview card component</title>
+        <link rel="icon" href="./images/favicon-32x32.png" type="image/png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        <meta name="theme-color" content="#444">
+        <meta name="color-scheme" content="dark">
+        <link rel="stylesheet" href="fonts.css">
+        <link rel="stylesheet" href="default.css">
+        <link rel="stylesheet" href="main.css">
+        <script>
+        // Always remove text selection when the user clicks on any part of the document
+        // This is to avoid those annoying times when you want to remove the selection but you can't
+        window.addEventListener('mousedown', event => {
+          if (event.button === 0) window.getSelection().empty()
+        }, {capture: true})
+
+        window.addEventListener('touchstart', event => {
+          window.getSelection().empty()
+        }, {capture: true})
+        </script>
+    </head>
+    <body>
+        <div data-id="app">
+            <div data-id="app-content">
+                <div class="card-component">
+                    <div class="contents">
+                        <h1 class="title">
+                            Get <span class="-emphasis">insights</span> that help
+                            your business grow.
+                        </h1>
+                        <p class="description">
+                            Discover the benefits of data analytics and make
+                            better decisions regarding revenue, customer
+                            experience, and overall efficiency.
+                        </p>
+                        <div class="stats">
+                            <div class="item">
+                                <span class="number">10k+</span>
+                                <span class="name">COMPANIES</span>
+                            </div>
+                            <div class="item">
+                                <span class="number">314</span>
+                                <span class="name">TEMPLATES</span>
+                            </div>
+                            <div class="item">
+                                <span class="number">12M+</span>
+                                <span class="name">QUERIES</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <picture>
+                            <img draggable="false" src="./images/image-header-desktop.jpg" alt="">
+                            <source media="(max-width: 400px)" srcset="./images/image-header-mobile.jpg">
+                        </picture>
+                        <div class="overlay-color"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
